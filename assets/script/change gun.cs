@@ -4,19 +4,31 @@ using UnityEngine;
 
 public class changegun : MonoBehaviour
 {
-    private int currentgun=0;
+    public int currentgun=0;
     // Start is called before the first frame update
     void Start()
     {
         ChangeGun();
         
     }
-
     // Update is called once per frame
     void Update()
     {
+            int perviusegun = currentgun;
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+                    currentgun=0;
 
-        
+        }
+           if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >=2)
+        {
+                    currentgun=1;
+
+        }
+        if (perviusegun != currentgun){
+            ChangeGun();
+        }
+       
     }
     private void ChangeGun()
     {
