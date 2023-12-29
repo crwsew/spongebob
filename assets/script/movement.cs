@@ -11,7 +11,7 @@ public class movement : MonoBehaviour
     public float jumpp=5;
     public LayerMask grlayer;
     private bool isgrounded=false;
-    public float gravity=-19.81f;
+    public float gravity=-30f;
     private Vector3 velocity;
     // Start is called before the first frame update
     void Start()
