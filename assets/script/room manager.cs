@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using System.Numerics;
 
 public class roommanager : MonoBehaviourPunCallbacks
 {
-
-
     void Start()
     {
         Debug.Log("Connecting...");
@@ -33,5 +32,4 @@ public class roommanager : MonoBehaviourPunCallbacks
         Debug.Log("We're Connected and in a room now!");
 
     }
-    
 }
