@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditor.Timeline;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
@@ -7,81 +9,131 @@ using UnityEngine.UIElements;
 
 public class gun : MonoBehaviour
 {
+
+
     private const bool V = false;
-    public float damage=10f;
-    public float range=150f;
+    public float damage = 10f;
+    public float range = 150f;
     public Camera cam;
     public ParticleSystem muzzle;
-    public int allammo=150;
-    public float reloaddelay=2f;
-    public int maxammo=10;
+    public int allammo = 150;
+    public float reloaddelay = 0.5f;
+    public int maxammo = 10;
     private int curentammo;
-    private bool isreload=false;
+    private bool isreload = false;
     private int currentallammo;
+    [Header("holle")]
+    public float minholl = 300;
+    public float maxholl = 500;
+    public Transform holeeject;
+    public GameObject hole;
+    [Header("Animation")]
+    public Animation anim;
+    public AnimationClip Reo;
+    [Header("anim shake")]
+    public Animation animshake;
+    [Header("anim zoom")]
+    public Animation animzoom;
+    public AnimationClip zoom;
+    [Header("unzoom")]
+    public Animation animunzoom;
+    public AnimationClip unzoom;
+
     // Start is called before the first frame update
     void Start()
     {
-        curentammo=maxammo;
-        currentallammo=allammo;
+        curentammo = maxammo;
+        currentallammo = allammo;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentallammo<=0 && curentammo<=0)
+        if (Input.GetMouseButtonDown(1))
+        {
+            animzoom.Play(zoom.name);
+        }
+        if (Input.GetMouseButtonUp(1))
+        {
+            animunzoom.Play(unzoom.name);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            reload();
+        }
+
+        if (currentallammo <= 0 && curentammo <= 0)
         {
             return;
-            
+
         }
-        if(isreload)
+        if (isreload)
         {
             return;
         }
-        if(Input.GetKeyDown(KeyCode.R)){
+        if (Input.GetKeyDown(KeyCode.R))
+        {
             StartCoroutine(reload());
             return;
         }
-        if (curentammo<=0){
-           StartCoroutine(reload());
+        if (curentammo <= 0)
+        {
+            StartCoroutine(reload());
             return;
         }
-    if (Input.GetButtonDown("Fire1"))
-    {
-        Shoot();
-    }    
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
     }
-    private void Shoot(){
+    private void Shoot()
+    {
+        makehole();
+        animshake.Play("shake");
         muzzle.Play();
         RaycastHit hit;
         curentammo--;
-        if(Physics.Raycast(cam.transform.position,cam.transform.forward,out hit,range))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {
             print(hit.transform.name);
-             enemy enemy= hit.transform.GetComponent<enemy>();
-             if (enemy != null){
-            enemy.Takedamage(damage);
+            enemy enemy = hit.transform.GetComponent<enemy>();
+            if (enemy != null)
+            {
+                enemy.Takedamage(damage);
+            }
         }
-        }
-        
+
 
     }
     private IEnumerator reload()
     {
-        if (currentallammo>0)
+        anim.Play(Reo.name);
+
+        if (currentallammo > 0)
         {
-        isreload=true;
-        print("reloaded");
-        yield return new WaitForSeconds(reloaddelay);
-        if(currentallammo<maxammo){
-            curentammo=currentallammo;
-            currentallammo=0;
-        }
-        else
-        {
-        currentallammo-=maxammo-curentammo;
-        curentammo=maxammo;
-        }
-        isreload=false;
+            isreload = true;
+            print("reloaded");
+            yield return new WaitForSeconds(reloaddelay);
+            if (currentallammo < maxammo)
+            {
+                curentammo = currentallammo;
+                currentallammo = 0;
             }
+            else
+            {
+                currentallammo -= maxammo - curentammo;
+                curentammo = maxammo;
+            }
+            isreload = false;
         }
+    }
+    public void makehole()
+    {
+        float randomforce = Random.Range(minholl, maxholl);
+        GameObject hulerb = Instantiate(hole, holeeject.position, Quaternion.identity);
+        hulerb.GetComponent<Rigidbody>().AddForce(holeeject.right * randomforce);
+        hulerb.GetComponent<Rigidbody>().AddTorque(hulerb.transform.up * 20000, ForceMode.Impulse);
+        Destroy(hulerb, 5f);
+    }
 }
