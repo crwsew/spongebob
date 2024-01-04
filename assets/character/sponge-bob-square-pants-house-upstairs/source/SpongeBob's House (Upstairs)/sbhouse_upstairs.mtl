@@ -1,0 +1,389 @@
+# Material file for sbhouse_upstairs.obj
+
+newmtl Mesh_0002.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0001_0.png
+
+newmtl Mesh_0008.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0002_0.png
+
+newmtl Mesh_0009.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0008_0.png
+
+newmtl Mesh_0010.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0009_0.png
+
+newmtl Mesh_0011.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0010_0.png
+
+newmtl Mesh_0012.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0011_0.png
+
+newmtl Mesh_0013.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0012_0.png
+
+newmtl Mesh_0014.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0013_0.png
+
+newmtl Mesh_0015.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0014_0.png
+
+newmtl Mesh_0016.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0015_0.png
+
+newmtl Mesh_0017.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0016_0.png
+
+newmtl Mesh_0018.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0017_0.png
+
+newmtl Mesh_0019.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0015_0.png
+
+newmtl Mesh_0020.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0019_0.png
+
+newmtl Mesh_0021.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0020_0.png
+
+newmtl Mesh_0022.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0021_0.png
+
+newmtl Mesh_0023.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0022_0.png
+
+newmtl Mesh_0024.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0023_0.png
+
+newmtl Mesh_0025.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0022_0.png
+
+newmtl Mesh_0026.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0025_0.png
+
+newmtl Mesh_0027.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0025_0.png
+
+newmtl Mesh_0028.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0015_0.png
+
+newmtl Mesh_0029.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0028_0.png
+
+newmtl Mesh_0030.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0029_0.png
+
+newmtl Mesh_0031.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0030_0.png
+
+newmtl Mesh_0032.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0031_0.png
+
+newmtl Mesh_0033.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0032_0.png
+
+newmtl Mesh_0034.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0033_0.png
+
+newmtl Mesh_0035.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0034_0.png
+
+newmtl Mesh_0036.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0035_0.png
+
+newmtl Mesh_0037.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0011_0.png
+
+newmtl Mesh_0050.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0049_0.png
+
+newmtl Mesh_0051.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0050_0.png
+
+newmtl Mesh_0052.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0051_0.png
+
+newmtl Mesh_0053.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0052_0.png
+
+newmtl Mesh_0054.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0049_0.png
+
+newmtl Mesh_0055.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0051_0.png
+
+newmtl Mesh_0056.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0055_0.png
+
+newmtl Mesh_0057.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0051_0.png
+
+newmtl Mesh_0058.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0057_0.png
+
+newmtl Mesh_0059.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0058_0.png
+
+newmtl Mesh_0060.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0051_0.png
+
+newmtl Mesh_0061.rip
+	Ns 96
+	d 1
+	illum 2
+	Kd 0.64 0.64 0.64
+	Ks 0.5 0.5 0.5
+	Ka 1.0 1.0 1.0
+	map_Kd Tex_0050_0.png
+
