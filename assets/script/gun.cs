@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Timeline;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class gun : MonoBehaviour
@@ -12,13 +14,13 @@ public class gun : MonoBehaviour
 
 
     private const bool V = false;
-    public float damage = 10f;
+    public float damage = 10;
     public float range = 150f;
     public Camera cam;
     public ParticleSystem muzzle;
-    public int allammo = 150;
-    public float reloaddelay = 0.5f;
-    public int maxammo = 10;
+    public int allammo = 140;
+    public float reloaddelay = 0.25f;
+    public int maxammo = 14;
     private int curentammo;
     private bool isreload = false;
     private int currentallammo;
@@ -38,12 +40,15 @@ public class gun : MonoBehaviour
     [Header("unzoom")]
     public Animation animunzoom;
     public AnimationClip unzoom;
+    [Header("ammo text")]
+    public TextMeshProUGUI ammotext;
 
     // Start is called before the first frame update
-    void Start()
+   private void OnEnable()
     {
         curentammo = maxammo;
         currentallammo = allammo;
+        updateui();
     }
 
     // Update is called once per frame
@@ -102,6 +107,7 @@ public class gun : MonoBehaviour
             {
                 enemy.Takedamage(damage);
             }
+                    updateui();
         }
 
 
@@ -127,6 +133,7 @@ public class gun : MonoBehaviour
             }
             isreload = false;
         }
+        updateui();
     }
     public void makehole()
     {
@@ -135,5 +142,8 @@ public class gun : MonoBehaviour
         hulerb.GetComponent<Rigidbody>().AddForce(holeeject.right * randomforce);
         hulerb.GetComponent<Rigidbody>().AddTorque(hulerb.transform.up * 20000, ForceMode.Impulse);
         Destroy(hulerb, 5f);
+    }
+    private void updateui(){
+        ammotext.text=currentallammo + "/" + curentammo;
     }
 }
