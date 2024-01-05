@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class playerstate : MonoBehaviour
 {
-    [SerializeField] private float maxhealth;
+    [SerializeField] private float maxhealth=100;
     private float currenhealth;
     public helthbar helthbar;
+    public bool isloacal;
       void Start(){
         currenhealth=maxhealth;
         helthbar.SetSliderMax(maxhealth);
@@ -33,6 +34,9 @@ public class playerstate : MonoBehaviour
   
       private void Die()
       {
+        if (isloacal)
         Debug.Log("you died!");
+        Destroy(gameObject);
+        roommanager.instance.Respawn();
               }
 }

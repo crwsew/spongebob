@@ -25,11 +25,35 @@ public class changegun : MonoBehaviour
                     currentgun=1;
 
         }
+        if (Input.GetAxis("Mouse ScrollWheel")>0f)
+        {
+            if (currentgun>=transform.childCount-1)
+            {
+                currentgun=0;
+            }
+            else
+            {
+                currentgun++;
+            }
+             if (Input.GetAxis("Mouse ScrollWheel")<0f)
+        {
+            if (currentgun<=0)
+            {
+                currentgun=transform.childCount-1;
+
+            }
+            else
+            {
+                currentgun--;
+            }
+        }
         if (perviusegun != currentgun){
             ChangeGun();
         }
        
     }
+    }
+
     private void ChangeGun()
     {
         int i=0;
@@ -45,4 +69,4 @@ public class changegun : MonoBehaviour
             i++;
         }
     }
-}
+    }

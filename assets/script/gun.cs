@@ -143,7 +143,7 @@ public class gun : MonoBehaviour
         hulerb.GetComponent<Rigidbody>().AddTorque(hulerb.transform.up * 20000, ForceMode.Impulse);
         Destroy(hulerb, 5f);
     }
-    private void updateui(){
-        ammotext.text=currentallammo + "/" + curentammo;
+public void updateui(){
+        ammotext.text=currentallammo+"/"+curentammo;
     }
 }
