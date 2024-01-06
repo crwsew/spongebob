@@ -138,7 +138,7 @@ public class gun : MonoBehaviour
     public void makehole()
     {
         float randomforce = Random.Range(minholl, maxholl);
-        GameObject hulerb = Instantiate(hole, holeeject.position, Quaternion.identity);
+        GameObject hulerb = Instantiate(hole, holeeject.transform.position, Quaternion.identity);
         hulerb.GetComponent<Rigidbody>().AddForce(holeeject.right * randomforce);
         hulerb.GetComponent<Rigidbody>().AddTorque(hulerb.transform.up * 20000, ForceMode.Impulse);
         Destroy(hulerb, 5f);

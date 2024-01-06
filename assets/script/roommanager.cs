@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using TMPro;
+using UnityEngine.UI;
 
 public class roommanager : MonoBehaviourPunCallbacks
 {
@@ -12,27 +14,32 @@ public class roommanager : MonoBehaviourPunCallbacks
 
     public GameObject nameui;
     public GameObject coonectedui;
-    private string nickname="unnamed";
-    void Avake(){
-        instance=this;
+    private string nickname = "unnamed";
+
+    public TMP_InputField display;
+    void Avake()
+    {
+        instance = this;
     }
-    public void ChangeNickName(string _name){
-        nickname= _name;
+    public void ChangeNickname(string name)
+    {
+
+        name = nickname;
     }
-    public void JoinRoomButtonPressed(){
-        
+    public void JoinRoomButtonPressed()
+    {
+
         nameui.SetActive(false);
         coonectedui.SetActive(true);
-    }
-    void Start()
-    {
         Debug.Log("Connecting...");
         PhotonNetwork.ConnectUsingSettings();
-
     }
+
     
 
-    public override void OnConnectedToMaster() {
+
+    public override void OnConnectedToMaster()
+    {
         base.OnConnectedToMaster();
 
         Debug.Log("Connected To Server!");
@@ -45,9 +52,9 @@ public class roommanager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedLobby();
 
-        PhotonNetwork.JoinOrCreateRoom("test", null , null);
+        PhotonNetwork.JoinOrCreateRoom("test", null, null);
 
-        Debug.Log("We're Connected and in a room now!");
+        Debug.Log("We're Connected");
 
     }
     public override void OnJoinedRoom()
@@ -59,10 +66,14 @@ public class roommanager : MonoBehaviourPunCallbacks
 
 
     }
-    public void Respawn(){
-        GameObject _player =PhotonNetwork.Instantiate(player.name,spawnpoint.position,Quaternion.identity);
-        _player.GetComponent<playersetup>().IsLocalplayer();
-            _player.GetComponent<playerstate>().isloacal=true;
+    public void Respawn()
+    {
+        GameObject _player = PhotonNetwork.Instantiate(player.name, spawnpoint.position, Quaternion.identity);
+        _player.GetComponent<PlayerSetup>().IsLocalPlayer();
+        _player.GetComponent<playerstate>().isloacal = true;
+        _player.GetComponent<PhotonView>().RPC("Setnickname", RpcTarget.All, nickname);
+
+
 
     }
 

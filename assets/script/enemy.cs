@@ -6,10 +6,10 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     
-    public float health=30;
+    public float health=30f;
     public void Takedamage(float damage){
         health =- damage;
-        if(health<=0){
+        if(health<=0f){
         die();
         }
     }
