@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.Timeline;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -24,11 +24,6 @@ public class gun : MonoBehaviour
     private int curentammo;
     private bool isreload = false;
     private int currentallammo;
-    [Header("holle")]
-    public float minholl = 300;
-    public float maxholl = 500;
-    public Transform holeeject;
-    public GameObject hole;
     [Header("Animation")]
     public Animation anim;
     public AnimationClip Reo;
@@ -94,7 +89,7 @@ public class gun : MonoBehaviour
     }
     private void Shoot()
     {
-        makehole();
+        
         animshake.Play("new");
         muzzle.Play();
         RaycastHit hit;
@@ -105,6 +100,7 @@ public class gun : MonoBehaviour
             if (enemy != null)
             {
                 enemy.Takedamage(damage);
+                PhotonNetwork.LocalPlayer.AddScore(20);
             }
                     updateui();
         }
@@ -134,14 +130,7 @@ public class gun : MonoBehaviour
         }
         updateui();
     }
-    public void makehole()
-    {
-        float randomforce = Random.Range(minholl, maxholl);
-        GameObject hulerb = Instantiate(hole, holeeject.transform.position, Quaternion.identity);
-        hulerb.GetComponent<Rigidbody>().AddForce(holeeject.transform.right * randomforce);
-        hulerb.GetComponent<Rigidbody>().AddTorque(hulerb.transform.up * 20000, ForceMode.Impulse);
-        Destroy(hulerb, 5f);
-    }
+    
 public void updateui(){
         ammotext.text=currentallammo+"/"+curentammo;
     }

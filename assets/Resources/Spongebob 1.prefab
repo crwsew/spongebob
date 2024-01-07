@@ -366,12 +366,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2040769367885656572}
   - component: {fileID: 4014363009789439795}
-  - component: {fileID: 7173384612742003600}
   - component: {fileID: 1666096005193499290}
   - component: {fileID: 5272665069953632799}
   - component: {fileID: 6612704355108724466}
   - component: {fileID: 7131128975154197151}
   - component: {fileID: 1360121058647552421}
+  - component: {fileID: 3908761940201492049}
+  - component: {fileID: 3837270141550806874}
   m_Layer: 0
   m_Name: spongebob_bind
   m_TagString: Player
@@ -421,32 +422,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gravity: -30
---- !u!143 &7173384612742003600
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538944932341870822}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 0
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!136 &1666096005193499290
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -469,7 +444,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &5272665069953632799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,10 +514,53 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 3908761940201492049}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &3908761940201492049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538944932341870822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!143 &3837270141550806874
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538944932341870822}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &1640855858949642087
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,6 +655,7 @@ GameObject:
   - component: {fileID: 3904654426592257069}
   - component: {fileID: 8477335640678670216}
   - component: {fileID: 440168593291220642}
+  - component: {fileID: 1185054756413119600}
   m_Layer: 0
   m_Name: colt
   m_TagString: Untagged
@@ -659,7 +678,6 @@ Transform:
   m_Children:
   - {fileID: 2142851013491898295}
   - {fileID: 470898993292849316}
-  - {fileID: 429151241170572445}
   m_Father: {fileID: 3391989788789729983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8477335640678670216
@@ -678,13 +696,9 @@ MonoBehaviour:
   range: 150
   cam: {fileID: 5745826171727200104}
   muzzle: {fileID: 1874495048067755743}
-  allammo: 150
-  reloaddelay: 2
+  allammo: 140
+  reloaddelay: 0.25
   maxammo: 14
-  minholl: 100
-  maxholl: 200
-  holeeject: {fileID: 429151241170572445}
-  hole: {fileID: 2387055808023385010, guid: fda739248f14c5548901ed9ac3cf313c, type: 3}
   anim: {fileID: 440168593291220642}
   Reo: {fileID: 7400000, guid: 5b096907f0892dd4abecc2f15a749730, type: 2}
   animshake: {fileID: 6283980404785161572}
@@ -712,6 +726,29 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!136 &1185054756413119600
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811988493777384422}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3741116976440363828
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,15 +930,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 150
-  cam: {fileID: 5745826171727200104}
-  muzzle: {fileID: 5181796922885968557}
-  allammo: 150
-  reloaddelay: 2
+  cam: {fileID: 0}
+  muzzle: {fileID: 0}
+  allammo: 140
+  reloaddelay: 0.25
   maxammo: 14
-  minholl: 100
-  maxholl: 200
-  holeeject: {fileID: 0}
-  hole: {fileID: 0}
   anim: {fileID: 0}
   Reo: {fileID: 0}
   animshake: {fileID: 0}
@@ -957,7 +990,7 @@ GameObject:
   - component: {fileID: 8879045198860245222}
   m_Layer: 0
   m_Name: Spongebob 1
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2245,37 +2278,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8040581340487221746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4418681827508379200}
-  m_Layer: 0
-  m_Name: bereject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4418681827508379200
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8040581340487221746}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000147218025, y: -0, z: 0.6019987}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2057533127614933665}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8043384066125508963
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,7 +2407,7 @@ Transform:
   m_GameObject: {fileID: 8078295765531203631}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.684, y: 1.02, z: 0.3}
+  m_LocalPosition: {x: 1.684, y: 1.02, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7386,6 +7388,7 @@ GameObject:
   - component: {fileID: 2057533127614933665}
   - component: {fileID: 6186356270597789583}
   - component: {fileID: 2925591164534566201}
+  - component: {fileID: 8530152243709169622}
   m_Layer: 0
   m_Name: berghmannrifle (1)
   m_TagString: Untagged
@@ -7406,7 +7409,6 @@ Transform:
   m_LocalScale: {x: 3.3928378, y: 3.3928378, z: 3.3928378}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4418681827508379200}
   - {fileID: 6340238363816856243}
   - {fileID: 8557992256787093921}
   - {fileID: 2739326262150092140}
@@ -7449,13 +7451,9 @@ MonoBehaviour:
   range: 150
   cam: {fileID: 5745826171727200104}
   muzzle: {fileID: 5181796922885968557}
-  allammo: 150
-  reloaddelay: 2
-  maxammo: 10
-  minholl: 100
-  maxholl: 200
-  holeeject: {fileID: 4418681827508379200}
-  hole: {fileID: 2387055808023385010, guid: fda739248f14c5548901ed9ac3cf313c, type: 3}
+  allammo: 140
+  reloaddelay: 0.25
+  maxammo: 14
   anim: {fileID: 6186356270597789583}
   Reo: {fileID: 7400000, guid: c83bf98001ea68640a9e6d280ab98703, type: 2}
   animshake: {fileID: 6283980404785161572}
@@ -7464,6 +7462,29 @@ MonoBehaviour:
   animunzoom: {fileID: 6186356270597789583}
   unzoom: {fileID: 7400000, guid: b09c7bb7a40c272458acd1c460ee67ab, type: 2}
   ammotext: {fileID: 8007515991854794547}
+--- !u!136 &8530152243709169622
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438125389789165531}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8502913283692065756
 GameObject:
   m_ObjectHideFlags: 0
@@ -12425,34 +12446,3 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!1 &9014811813405406341
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 429151241170572445}
-  m_Layer: 0
-  m_Name: colteject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &429151241170572445
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9014811813405406341}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6900215, y: 0.82000077, z: -0.21289134}
-  m_LocalScale: {x: 0.35450932, y: 0.3545093, z: 0.3545093}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3904654426592257069}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

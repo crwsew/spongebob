@@ -34,9 +34,11 @@ public class playerstate : MonoBehaviour
   
       private void Die()
       {
-        if (isloacal)
-        Debug.Log("you died!");
+        if (isloacal){
+           Debug.Log("you died!");
         Destroy(gameObject);
-        roommanager.instance.Respawn();
+        GetComponent<roommanager>().Respawn();
+        }
+       
               }
 }
