@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8632506480792100161}
   m_Layer: 5
   m_Name: username
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,6 +240,37 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!1 &517686807542565487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2705018271483841104}
+  m_Layer: 0
+  m_Name: position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2705018271483841104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517686807542565487}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3.94}
+  m_LocalScale: {x: 0.35450935, y: 0.35450932, z: 0.35450932}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3066845033048068635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &782390244631191186
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,11 +370,11 @@ GameObject:
   - component: {fileID: 1666096005193499290}
   - component: {fileID: 5272665069953632799}
   - component: {fileID: 6612704355108724466}
-  - component: {fileID: 6764522060101206112}
-  - component: {fileID: 3043642166744797834}
+  - component: {fileID: 7131128975154197151}
+  - component: {fileID: 1360121058647552421}
   m_Layer: 0
   m_Name: spongebob_bind
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,7 +505,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gravity: -30
---- !u!114 &6764522060101206112
+--- !u!114 &7131128975154197151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538944932341870822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089cf62dd6b2c1c4baf4c9a607784e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 4014363009789439795}
+  cammera: {fileID: 8126437123162786171}
+  nickname: 
+  nicknameText: {fileID: 1234919705030950034}
+--- !u!114 &1360121058647552421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -496,22 +543,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &3043642166744797834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538944932341870822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 089cf62dd6b2c1c4baf4c9a607784e00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement: {fileID: 4014363009789439795}
-  cammera: {fileID: 8126437123162786171}
-  nickname: sevda
-  nicknameText: {fileID: 1234919705030950034}
 --- !u!1 &1640855858949642087
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +687,7 @@ MonoBehaviour:
   hole: {fileID: 2387055808023385010, guid: fda739248f14c5548901ed9ac3cf313c, type: 3}
   anim: {fileID: 440168593291220642}
   Reo: {fileID: 7400000, guid: 5b096907f0892dd4abecc2f15a749730, type: 2}
-  animshake: {fileID: 440168593291220642}
+  animshake: {fileID: 6283980404785161572}
   animzoom: {fileID: 440168593291220642}
   zoom: {fileID: 7400000, guid: aee2867b5d34da44eab79f8113d844f6, type: 2}
   animunzoom: {fileID: 440168593291220642}
@@ -926,7 +957,7 @@ GameObject:
   - component: {fileID: 8879045198860245222}
   m_Layer: 0
   m_Name: Spongebob 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1485,6 +1516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3391989788789729983}
   - component: {fileID: 8519350600370240582}
+  - component: {fileID: 6283980404785161572}
   m_Layer: 0
   m_Name: holder
   m_TagString: Untagged
@@ -1508,7 +1540,7 @@ Transform:
   - {fileID: 2057533127614933665}
   - {fileID: 3904654426592257069}
   m_Father: {fileID: 3066845033048068635}
-  m_LocalEulerAnglesHint: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8519350600370240582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1522,6 +1554,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentgun: 0
+--- !u!111 &6283980404785161572
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872040132728723148}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: cdac3d4a97105e8448f333b9629df572, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: cdac3d4a97105e8448f333b9629df572, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6122953460194187728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,9 +2254,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4418681827508379200}
-  - component: {fileID: 4636517943548370665}
   m_Layer: 0
-  m_Name: holeeject
+  m_Name: bereject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2229,29 +2276,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2057533127614933665}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4636517943548370665
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8040581340487221746}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8043384066125508963
 GameObject:
   m_ObjectHideFlags: 0
@@ -7275,6 +7299,7 @@ Transform:
   - {fileID: 3391989788789729983}
   - {fileID: 6708840816570294051}
   - {fileID: 473694962085876400}
+  - {fileID: 2705018271483841104}
   m_Father: {fileID: 2040769367885656572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &5745826171727200104
@@ -7404,7 +7429,6 @@ Animation:
   - {fileID: 7400000, guid: c83bf98001ea68640a9e6d280ab98703, type: 2}
   - {fileID: 7400000, guid: b09c7bb7a40c272458acd1c460ee67ab, type: 2}
   - {fileID: 7400000, guid: ea45891aa4105c54793dfb4278974efd, type: 2}
-  - {fileID: 7400000, guid: c15c7476ffc04954b86dbbaecc8674a7, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -7434,7 +7458,7 @@ MonoBehaviour:
   hole: {fileID: 2387055808023385010, guid: fda739248f14c5548901ed9ac3cf313c, type: 3}
   anim: {fileID: 6186356270597789583}
   Reo: {fileID: 7400000, guid: c83bf98001ea68640a9e6d280ab98703, type: 2}
-  animshake: {fileID: 6186356270597789583}
+  animshake: {fileID: 6283980404785161572}
   animzoom: {fileID: 6186356270597789583}
   zoom: {fileID: 7400000, guid: ea45891aa4105c54793dfb4278974efd, type: 2}
   animunzoom: {fileID: 6186356270597789583}
@@ -12410,9 +12434,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 429151241170572445}
-  - component: {fileID: 1261340215805313687}
   m_Layer: 0
-  m_Name: holeeject
+  m_Name: colteject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12433,26 +12456,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3904654426592257069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1261340215805313687
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9014811813405406341}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

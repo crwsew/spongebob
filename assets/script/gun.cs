@@ -14,7 +14,7 @@ public class gun : MonoBehaviour
 
 
     private const bool V = false;
-    public float damage = 10;
+    public float damage = 10f;
     public float range = 150f;
     public Camera cam;
     public ParticleSystem muzzle;
@@ -95,13 +95,12 @@ public class gun : MonoBehaviour
     private void Shoot()
     {
         makehole();
-        animshake.Play("shake");
+        animshake.Play("new");
         muzzle.Play();
         RaycastHit hit;
         curentammo--;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {
-            print(hit.transform.name);
             enemy enemy = hit.transform.GetComponent<enemy>();
             if (enemy != null)
             {
@@ -139,7 +138,7 @@ public class gun : MonoBehaviour
     {
         float randomforce = Random.Range(minholl, maxholl);
         GameObject hulerb = Instantiate(hole, holeeject.transform.position, Quaternion.identity);
-        hulerb.GetComponent<Rigidbody>().AddForce(holeeject.right * randomforce);
+        hulerb.GetComponent<Rigidbody>().AddForce(holeeject.transform.right * randomforce);
         hulerb.GetComponent<Rigidbody>().AddTorque(hulerb.transform.up * 20000, ForceMode.Impulse);
         Destroy(hulerb, 5f);
     }

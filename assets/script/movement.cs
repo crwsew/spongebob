@@ -13,13 +13,10 @@ public class movement : MonoBehaviour
     private bool isgrounded=false;
     public float gravity=-30f;
     private Vector3 velocity;
-    // Start is called before the first frame update
     void Start()
     {
         control=GetComponent<CharacterController>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         isgrounded = Physics.CheckSphere(transform.position+groundcheckpos,groundcheckedradus,grlayer);

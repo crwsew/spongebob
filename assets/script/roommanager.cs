@@ -11,20 +11,15 @@ public class roommanager : MonoBehaviourPunCallbacks
     public GameObject player;
     public Transform spawnpoint;
     public GameObject roomcam;
-
     public GameObject nameui;
     public GameObject coonectedui;
-    private string nickname = "unnamed";
-
-    public TMP_InputField display;
+    public string nickname;
     void Avake()
     {
         instance = this;
     }
-    public void ChangeNickname(string name)
-    {
-
-        name = nickname;
+   public void ChangeNickname(string _name) {
+        nickname = _name;
     }
     public void JoinRoomButtonPressed()
     {
@@ -55,6 +50,7 @@ public class roommanager : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinOrCreateRoom("test", null, null);
 
         Debug.Log("We're Connected");
+                Invoke("PhotonInit", 3);
 
     }
     public override void OnJoinedRoom()
@@ -68,13 +64,12 @@ public class roommanager : MonoBehaviourPunCallbacks
     }
     public void Respawn()
     {
-        GameObject _player = PhotonNetwork.Instantiate(player.name, spawnpoint.position, Quaternion.identity);
+        PhotonNetwork.LocalPlayer.NickName=nickname;
+        GameObject _player = PhotonNetwork.Instantiate (player.name, spawnpoint.position,Quaternion.identity);
+
         _player.GetComponent<PlayerSetup>().IsLocalPlayer();
-        _player.GetComponent<playerstate>().isloacal = true;
-        _player.GetComponent<PhotonView>().RPC("Setnickname", RpcTarget.All, nickname);
 
-
-
+        _player.GetComponent<PhotonView>().RPC("SetNickName",RpcTarget.All,nickname);
     }
 
 }
